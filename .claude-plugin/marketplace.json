@@ -1,0 +1,13 @@
+{
+  "name": "cerberus",
+  "description": "Verification-first Claude Code plugins: multi-agent delivery loops where nothing ships unchecked.",
+  "owner": {
+    "name": "Alessandra Cracana"
+  },
+  "plugins": [
+    {
+      "name": "cerberus",
+      "source": "./plugins/cerberus"
+    }
+  ]
+}

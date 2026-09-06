@@ -72,6 +72,11 @@ Cap agent count:
 Default to parallel. Dispatch independent workers in one message. Use sequential
 only for a real output dependency, and pass a file, not a summary.
 
+**Coverage check before briefing.** List what the original request asks for and
+map each item to exactly one worker. Anything unmapped is a decomposition gap:
+fix the split, not the workers. A missing category is the orchestrator's
+failure, and adding workers to an unchanged split only reproduces it.
+
 See `${CLAUDE_SKILL_DIR}/references/decomposition.md` when the split is unclear.
 
 ---
@@ -110,8 +115,8 @@ the line quoted. Reject an assertion of success with no evidence.
 Delegate to `loop-verifier`. Never the agent that produced the work, and not its
 model tier — with one disclosed exception, defined in Gate 6.
 
-The verifier receives the artifact and the criteria only — never the drafting
-conversation. One judge, one rubric. Returns
+The verifier receives the artifact, the criteria, and the original request —
+never the drafting conversation. One judge, one rubric. Returns
 `${CLAUDE_SKILL_DIR}/templates/verdict.md`: 0.0–1.0 per criterion, pass/fail,
 each failure located.
 

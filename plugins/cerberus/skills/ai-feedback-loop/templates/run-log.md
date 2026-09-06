@@ -25,7 +25,8 @@ context. This file is the countermeasure.
 
 <!-- When a worker went wrong, which of the six fields would have prevented it?
      This is the highest-value line in the log. Most worker failures are brief
-     failures. -->
+     failures - and a missing category is a decomposition failure: the split,
+     not the worker. -->
 
 ### Escalations
 

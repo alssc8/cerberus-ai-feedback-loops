@@ -32,7 +32,7 @@ Score each criterion 0.0-1.0, then a hard pass/fail on the whole:
 |---|---|---|
 | **Factual accuracy** | Does every claim match its source of record? | Any figure, date, name, or number not traceable to a named source |
 | **Attribution accuracy** | Does each cited source actually support the claim made from it? | A source is cited but says something narrower or different |
-| **Completeness** | Is every requirement in the brief present? | A requirement is missing, or answered at the wrong depth |
+| **Completeness** | Is every brief requirement present, and does the deliverable cover the original request? | A requirement is missing, answered at the wrong depth, or a category of the original request has no owner at all |
 | **Source quality** | Are primary sources used where they exist? | A secondary or SEO-optimized source stands in for an available primary one |
 | **Brief fidelity** | Has the artifact drifted from its stated purpose? | The conversion goal, neutrality requirement, or voice has shifted |
 | **Scope discipline** | Did anything appear that was out of scope? | Content outside the boundary, however good |
@@ -46,6 +46,9 @@ artifact regardless of other scores. These are not averaged.
 - The artifact.
 - The acceptance criteria from the brief.
 - The sources of record it is allowed to check against.
+- The original request, so it can check coverage - does the deliverable answer
+  what was asked, not only what the briefs listed? A category nobody owned is a
+  decomposition failure and is reported as the orchestrator's, not a worker's.
 
 **Not** the worker's reasoning, its intermediate drafts, or its self-assessment.
 A verifier that reads the working inherits the blind spots.

@@ -2,7 +2,7 @@
   "name": "cerberus",
   "displayName": "Cerberus",
   "description": "Verified multi-agent delivery. A frontier orchestrator decomposes, briefs and verifies against external sources of truth while cheaper models produce the artifact. Three heads, eight gates, nothing ships unchecked.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Alessandra Cracana"
   },

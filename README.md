@@ -73,8 +73,11 @@ A model correcting itself with no external signal tends to get worse, not better
 so Gate 1 stops the run before you spend anything. It refusing to run is the
 feature, not a bug.
 
-Sources of truth in practice: a raw analytics export, an ingredient list, a
-regulation text, a timestamped transcript, the brief file itself.
+Sources of truth in practice: a raw export, a test suite, a spec sheet, a
+regulation text, a timestamped transcript, the brief file itself. The full
+catalogue and seven domain packs (software, finance, legal, research,
+operations, design & localization, marketing) live in
+`references/ground-truth.md`.
 
 ## Deliberate design choices
 

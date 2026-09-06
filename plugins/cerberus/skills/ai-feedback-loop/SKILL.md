@@ -1,6 +1,6 @@
 ---
 name: ai-feedback-loop
-description: Produce a checkable deliverable through a verified multi-agent loop - strategy documents, funnel diagnostics, fact-checked editorial, campaign systems, client reports, competitive teardowns, localization. A frontier orchestrator decomposes, briefs and verifies; cheaper models produce. Use when the work has an external source of truth and is too large or too consequential for one pass.
+description: Produce a checkable deliverable through a verified multi-agent loop - reports, analyses, code changes, contracts, research summaries, campaign systems, localization, anything with a source of record. A frontier orchestrator decomposes, briefs and verifies; cheaper models produce. Use when the work has an external source of truth and is too large or too consequential for one pass.
 when_to_use: Invoke manually with /cerberus:ai-feedback-loop - this skill never fires on its own. Reach for it when a deliverable spans several markets, platforms or funnel stages, when every claim must be checked against an external source of record, or when a wrong claim reaching a client carries legal, factual or financial cost.
 disable-model-invocation: true
 ---
@@ -39,13 +39,16 @@ Build the register — one row per factual surface:
 
 | Claim surface | Source of record | Check |
 |---|---|---|
-| Metrics, conversion, traffic | Raw export or first-party dashboard | Recompute; flag anything untraceable |
-| Product or ingredient claims | Spec sheet, INCI list, supplier doc | Line-by-line match |
-| Quotes | Source transcript, timestamped | Verbatim; speaker intent preserved |
-| Legal or promotional terms | Regulation text, statute, platform policy | Clause by clause; re-read dates and numbers |
-| Competitor or market claims | Named primary source, dated | Primary required; secondary is a finding |
+| Quantitative claims (metrics, figures, calculations) | Raw export, dataset, or system of record | Recompute from the source; every figure reproduces or it is a finding |
+| Behaviour of code or systems | The running code, test suite, or execution trace | Execute it; observed behaviour must match the claim |
+| Quotations and attributed statements | Source transcript, recording, or signed document | Verbatim match; speaker or author and context preserved |
+| Legal or regulatory terms | Statute, regulation text, or the executed contract or policy | Clause by clause; re-read every date and number |
+| Third-party or competitor claims | Named primary source, dated | Primary required; a secondary source is a finding, not a citation |
+| Identities and dates | Official record: registry, filing, calendar, ID | Cross-check spelling, date and identity against the record |
 | Brief compliance | The brief file | Each requirement present, nothing extra |
-| Voice | Voice guide, approved assets | Name the failure type: tonal, structural, factual, conversion-logic |
+| Voice, format or style requirements | Style guide, template, or approved reference asset | Name the failure type: tonal, structural, factual, or logical |
+
+Full catalogue and domain packs: `${CLAUDE_SKILL_DIR}/references/ground-truth.md`
 
 Rules:
 
